@@ -1,0 +1,1605 @@
+{
+  "version": "48.0.0",
+  "artifacts": {
+    "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "amplify:deployment-type": "sandbox",
+          "created-by": "amplify"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1075c5bc59320cd75eec036d0f333695f280c2b49453034ada368a28ad401286.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad.assets"
+      ],
+      "metadata": {
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ]
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/deploymentType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deploymentType"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "region"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolF94589C0Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolF94589C0Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolAppClient580C03E1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolAppClient580C03E1Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/mfaConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaConfiguration"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/mfaTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaTypes"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/socialProviders": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "socialProviders"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthCognitoDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthCognitoDomain"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthScope": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthScope"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthRedirectSignIn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignIn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthRedirectSignOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignOut"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthResponseType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthResponseType"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/oauthClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthClientId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/groups": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "groups"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/GraphQLAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPI42A6FA33"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/GraphQLAPI/TransformerSchema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/GraphQLAPI/NONE_DS": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPINONEDS684BF699"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableIsCompleteRoleF825222C"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRole470BE899"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachine060600BC"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent2203B711Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent2203B711Arn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Device"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceTable/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeviceTable"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Device"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/CustomTableDeviceTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Device"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/GetAttDeviceTableStreamArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttDeviceTableStreamArn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/GetAttDeviceTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttDeviceTableName"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "DeviceIAMRole"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeviceIAMRole48AB7F95"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "DeviceIAMRole"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "DeviceTable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeviceDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "DeviceTable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerygetDeviceauth0Function/QuerygetDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetDeviceauth0FunctionQuerygetDeviceauth0FunctionAppSyncFunctionE9D84544"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerygetDevicepostAuth0Function/QuerygetDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetDevicepostAuth0FunctionQuerygetDevicepostAuth0FunctionAppSyncFunction408D7C1C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QueryGetDeviceDataResolverFn/QueryGetDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetDeviceDataResolverFnQueryGetDeviceDataResolverFnAppSyncFunction7DD622FA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/queryGetDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerylistDevicesauth0Function/QuerylistDevicesauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistDevicesauth0FunctionQuerylistDevicesauth0FunctionAppSyncFunction1D10C07D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistDevicesauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerylistDevicespostAuth0Function/QuerylistDevicespostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistDevicespostAuth0FunctionQuerylistDevicespostAuth0FunctionAppSyncFunctionAD2CEE19"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistDevicespostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QueryListDevicesDataResolverFn/QueryListDevicesDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListDevicesDataResolverFnQueryListDevicesDataResolverFnAppSyncFunctionB811C2D4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListDevicesDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/queryListDevicesResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listDevices"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDeviceinit0Function/MutationcreateDeviceinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateDeviceinit0FunctionMutationcreateDeviceinit0FunctionAppSyncFunction47189968"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateDeviceinit0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDeviceauth0Function/MutationcreateDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateDeviceauth0FunctionMutationcreateDeviceauth0FunctionAppSyncFunctionC9E29764"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDevicepostAuth0Function/MutationcreateDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateDevicepostAuth0FunctionMutationcreateDevicepostAuth0FunctionAppSyncFunctionF7E412C6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationCreateDeviceDataResolverFn/MutationCreateDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateDeviceDataResolverFnMutationCreateDeviceDataResolverFnAppSyncFunction83B1CD29"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationCreateDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDeviceinit0Function/MutationupdateDeviceinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateDeviceinit0FunctionMutationupdateDeviceinit0FunctionAppSyncFunction2976639D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateDeviceinit0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDeviceauth0Function/MutationupdateDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateDeviceauth0FunctionMutationupdateDeviceauth0FunctionAppSyncFunctionB3EFB6B3"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDevicepostAuth0Function/MutationupdateDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateDevicepostAuth0FunctionMutationupdateDevicepostAuth0FunctionAppSyncFunctionB0260441"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationUpdateDeviceDataResolverFn/MutationUpdateDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateDeviceDataResolverFnMutationUpdateDeviceDataResolverFnAppSyncFunction3A3B9986"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationUpdateDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationdeleteDeviceauth0Function/MutationdeleteDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteDeviceauth0FunctionMutationdeleteDeviceauth0FunctionAppSyncFunction89481AAF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationdeleteDevicepostAuth0Function/MutationdeleteDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteDevicepostAuth0FunctionMutationdeleteDevicepostAuth0FunctionAppSyncFunctionABE1E6F4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationDeleteDeviceDataResolverFn/MutationDeleteDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteDeviceDataResolverFnMutationDeleteDeviceDataResolverFnAppSyncFunction690311FB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationDeleteDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononCreateDeviceauth0Function/SubscriptiononCreateDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateDeviceauth0FunctionSubscriptiononCreateDeviceauth0FunctionAppSyncFunction9F6A1BD8"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononCreateDevicepostAuth0Function/SubscriptiononCreateDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateDevicepostAuth0FunctionSubscriptiononCreateDevicepostAuth0FunctionAppSyncFunction2AB5599A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnCreateDeviceDataResolverFn/SubscriptionOnCreateDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateDeviceDataResolverFnSubscriptionOnCreateDeviceDataResolverFnAppSyncFunction15AF5152"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnCreateDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononUpdateDeviceauth0Function/SubscriptiononUpdateDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateDeviceauth0FunctionSubscriptiononUpdateDeviceauth0FunctionAppSyncFunctionF5B9EBF6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononUpdateDevicepostAuth0Function/SubscriptiononUpdateDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateDevicepostAuth0FunctionSubscriptiononUpdateDevicepostAuth0FunctionAppSyncFunction52084CB7"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnUpdateDeviceDataResolverFn/SubscriptionOnUpdateDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateDeviceDataResolverFnSubscriptionOnUpdateDeviceDataResolverFnAppSyncFunction90B537AF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnUpdateDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononDeleteDeviceauth0Function/SubscriptiononDeleteDeviceauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteDeviceauth0FunctionSubscriptiononDeleteDeviceauth0FunctionAppSyncFunctionA77B33CC"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteDeviceauth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononDeleteDevicepostAuth0Function/SubscriptiononDeleteDevicepostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteDevicepostAuth0FunctionSubscriptiononDeleteDevicepostAuth0FunctionAppSyncFunction9CE65A66"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteDevicepostAuth0Function"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnDeleteDeviceDataResolverFn/SubscriptionOnDeleteDeviceDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteDeviceDataResolverFnSubscriptionOnDeleteDeviceDataResolverFnAppSyncFunction5FF3B63B"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteDeviceDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnDeleteDeviceResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteDeviceResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteDevice"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceOwnerDataResolverFn/DeviceOwnerDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeviceOwnerDataResolverFnDeviceOwnerDataResolverFnAppSyncFunction4D6B9452"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "DeviceOwnerDataResolverFn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/deviceOwnerResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeviceownerResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Device.owner"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource0EDC9522Outputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent2203B711Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource0EDC9522OutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableMa3BA030D8"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device.NestedStack/Device.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataDeviceNestedStackDeviceNestedStackResource250879DF"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/modelIntrospectionSchemaBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketF566B665"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolF94589C0Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthUserPoolF94589C0Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/reference-to-amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputs.amplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDGraphQLUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDGraphQLUrl"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB51C2CF57DestinationBucketArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB51C2CF57DestinationBucketArn"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data.NestedStack/data.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "data7552DF31"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/awsAppsyncApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiId"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/awsAppsyncApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiEndpoint"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/awsAppsyncAuthenticationType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAuthenticationType"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/awsAppsyncRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncRegion"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/amplifyApiModelSchemaS3Uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyApiModelSchemaS3Uri"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/awsAppsyncAdditionalAuthenticationTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAdditionalAuthenticationTypes"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "aws-cdk-lib/feature-flag-report": {
+      "type": "cdk:feature-flag-report",
+      "properties": {
+        "module": "aws-cdk-lib",
+        "flags": {
+          "@aws-cdk/aws-signer:signingProfileNamePassedToCfn": {
+            "recommendedValue": true,
+            "explanation": "Pass signingProfileName to CfnSigningProfile"
+          },
+          "@aws-cdk/core:newStyleStackSynthesis": {
+            "recommendedValue": true,
+            "explanation": "Switch to new stack synthesis method which enables CI/CD",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:stackRelativeExports": {
+            "recommendedValue": true,
+            "explanation": "Name exports based on the construct paths relative to the stack, rather than the global construct path",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-rds:lowercaseDbIdentifier": {
+            "recommendedValue": true,
+            "explanation": "Force lowercasing of RDS Cluster names in CDK",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": {
+            "recommendedValue": true,
+            "explanation": "Allow adding/removing multiple UsagePlanKeys independently",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-lambda:recognizeVersionProps": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to opt in to the updated logical id calculation for Lambda Version created using the  `fn.currentVersion`.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-lambda:recognizeLayerVersion": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to opt in to the updated logical id calculation for Lambda Version created using the `fn.currentVersion`."
+          },
+          "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to have cloudfront distributions use the security policy TLSv1.2_2021 by default.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:checkSecretUsage": {
+            "recommendedValue": true,
+            "explanation": "Enable this flag to make it impossible to accidentally use SecretValues in unsafe locations"
+          },
+          "@aws-cdk/core:target-partitions": {
+            "recommendedValue": [
+              "aws",
+              "aws-cn"
+            ],
+            "explanation": "What regions to include in lookup tables of environment agnostic stacks"
+          },
+          "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": {
+            "recommendedValue": true,
+            "explanation": "ECS extensions will automatically add an `awslogs` driver if no logging is specified"
+          },
+          "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to have Launch Templates generated by the `InstanceRequireImdsv2Aspect` use unique names."
+          },
+          "@aws-cdk/aws-ecs:arnFormatIncludesClusterName": {
+            "recommendedValue": true,
+            "explanation": "ARN format used by ECS. In the new ARN format, the cluster name is part of the resource ID."
+          },
+          "@aws-cdk/aws-iam:minimizePolicies": {
+            "recommendedValue": true,
+            "explanation": "Minimize IAM policies by combining Statements"
+          },
+          "@aws-cdk/core:validateSnapshotRemovalPolicy": {
+            "recommendedValue": true,
+            "explanation": "Error on snapshot removal policies on resources that do not support it."
+          },
+          "@aws-cdk/aws-codepipeline:crossAccountKeyAliasStackSafeResourceName": {
+            "recommendedValue": true,
+            "explanation": "Generate key aliases that include the stack name"
+          },
+          "@aws-cdk/aws-s3:createDefaultLoggingPolicy": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to create an S3 bucket policy by default in cases where an AWS service would automatically create the Policy if one does not exist."
+          },
+          "@aws-cdk/aws-sns-subscriptions:restrictSqsDescryption": {
+            "recommendedValue": true,
+            "explanation": "Restrict KMS key policy for encrypted Queues a bit more"
+          },
+          "@aws-cdk/aws-apigateway:disableCloudWatchRole": {
+            "recommendedValue": true,
+            "explanation": "Make default CloudWatch Role behavior safe for multiple API Gateways in one environment"
+          },
+          "@aws-cdk/core:enablePartitionLiterals": {
+            "recommendedValue": true,
+            "explanation": "Make ARNs concrete if AWS partition is known"
+          },
+          "@aws-cdk/aws-events:eventsTargetQueueSameAccount": {
+            "recommendedValue": true,
+            "explanation": "Event Rules may only push to encrypted SQS queues in the same account"
+          },
+          "@aws-cdk/aws-ecs:disableExplicitDeploymentControllerForCircuitBreaker": {
+            "recommendedValue": true,
+            "explanation": "Avoid setting the \"ECS\" deployment controller when adding a circuit breaker"
+          },
+          "@aws-cdk/aws-iam:importedRoleStackSafeDefaultPolicyName": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature to by default create default policy names for imported roles that depend on the stack the role is in."
+          },
+          "@aws-cdk/aws-s3:serverAccessLogsUseBucketPolicy": {
+            "recommendedValue": true,
+            "explanation": "Use S3 Bucket Policy instead of ACLs for Server Access Logging"
+          },
+          "@aws-cdk/aws-route53-patters:useCertificate": {
+            "recommendedValue": true,
+            "explanation": "Use the official `Certificate` resource instead of `DnsValidatedCertificate`"
+          },
+          "@aws-cdk/customresources:installLatestAwsSdkDefault": {
+            "recommendedValue": false,
+            "explanation": "Whether to install the latest SDK by default in AwsCustomResource"
+          },
+          "@aws-cdk/aws-rds:databaseProxyUniqueResourceName": {
+            "recommendedValue": true,
+            "explanation": "Use unique resource name for Database Proxy"
+          },
+          "@aws-cdk/aws-codedeploy:removeAlarmsFromDeploymentGroup": {
+            "recommendedValue": true,
+            "explanation": "Remove CloudWatch alarms from deployment group"
+          },
+          "@aws-cdk/aws-apigateway:authorizerChangeDeploymentLogicalId": {
+            "recommendedValue": true,
+            "explanation": "Include authorizer configuration in the calculation of the API deployment logical ID."
+          },
+          "@aws-cdk/aws-ec2:launchTemplateDefaultUserData": {
+            "recommendedValue": true,
+            "explanation": "Define user data for a launch template by default when a machine image is provided."
+          },
+          "@aws-cdk/aws-secretsmanager:useAttachedSecretResourcePolicyForSecretTargetAttachments": {
+            "recommendedValue": true,
+            "explanation": "SecretTargetAttachments uses the ResourcePolicy of the attached Secret."
+          },
+          "@aws-cdk/aws-redshift:columnId": {
+            "recommendedValue": true,
+            "explanation": "Whether to use an ID to track Redshift column changes"
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:enableEmrServicePolicyV2": {
+            "recommendedValue": true,
+            "explanation": "Enable AmazonEMRServicePolicy_v2 managed policies"
+          },
+          "@aws-cdk/aws-ec2:restrictDefaultSecurityGroup": {
+            "recommendedValue": true,
+            "explanation": "Restrict access to the VPC default security group"
+          },
+          "@aws-cdk/aws-apigateway:requestValidatorUniqueId": {
+            "recommendedValue": true,
+            "explanation": "Generate a unique id for each RequestValidator added to a method"
+          },
+          "@aws-cdk/aws-kms:aliasNameRef": {
+            "recommendedValue": true,
+            "explanation": "KMS Alias name and keyArn will have implicit reference to KMS Key"
+          },
+          "@aws-cdk/aws-kms:applyImportedAliasPermissionsToPrincipal": {
+            "recommendedValue": true,
+            "explanation": "Enable grant methods on Aliases imported by name to use kms:ResourceAliases condition"
+          },
+          "@aws-cdk/aws-autoscaling:generateLaunchTemplateInsteadOfLaunchConfig": {
+            "recommendedValue": true,
+            "explanation": "Generate a launch template when creating an AutoScalingGroup"
+          },
+          "@aws-cdk/core:includePrefixInUniqueNameGeneration": {
+            "recommendedValue": true,
+            "explanation": "Include the stack prefix in the stack name generation process"
+          },
+          "@aws-cdk/aws-efs:denyAnonymousAccess": {
+            "recommendedValue": true,
+            "explanation": "EFS denies anonymous clients accesses"
+          },
+          "@aws-cdk/aws-opensearchservice:enableOpensearchMultiAzWithStandby": {
+            "recommendedValue": true,
+            "explanation": "Enables support for Multi-AZ with Standby deployment for opensearch domains"
+          },
+          "@aws-cdk/aws-lambda-nodejs:useLatestRuntimeVersion": {
+            "recommendedValue": true,
+            "explanation": "Enables aws-lambda-nodejs.Function to use the latest available NodeJs runtime as the default"
+          },
+          "@aws-cdk/aws-efs:mountTargetOrderInsensitiveLogicalId": {
+            "recommendedValue": true,
+            "explanation": "When enabled, mount targets will have a stable logicalId that is linked to the associated subnet."
+          },
+          "@aws-cdk/aws-rds:auroraClusterChangeScopeOfInstanceParameterGroupWithEachParameters": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a scope of InstanceParameterGroup for AuroraClusterInstance with each parameters will change."
+          },
+          "@aws-cdk/aws-appsync:useArnForSourceApiAssociationIdentifier": {
+            "recommendedValue": true,
+            "explanation": "When enabled, will always use the arn for identifiers for CfnSourceApiAssociation in the GraphqlApi construct rather than id."
+          },
+          "@aws-cdk/aws-rds:preventRenderingDeprecatedCredentials": {
+            "recommendedValue": true,
+            "explanation": "When enabled, creating an RDS database cluster from a snapshot will only render credentials for snapshot credentials."
+          },
+          "@aws-cdk/aws-codepipeline-actions:useNewDefaultBranchForCodeCommitSource": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the CodeCommit source action is using the default branch name 'main'."
+          },
+          "@aws-cdk/aws-cloudwatch-actions:changeLambdaPermissionLogicalIdForLambdaAction": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the logical ID of a Lambda permission for a Lambda action includes an alarm ID."
+          },
+          "@aws-cdk/aws-codepipeline:crossAccountKeysDefaultValueToFalse": {
+            "recommendedValue": true,
+            "explanation": "Enables Pipeline to set the default value for crossAccountKeys to false."
+          },
+          "@aws-cdk/aws-codepipeline:defaultPipelineTypeToV2": {
+            "recommendedValue": true,
+            "explanation": "Enables Pipeline to set the default pipeline type to V2."
+          },
+          "@aws-cdk/aws-kms:reduceCrossAccountRegionPolicyScope": {
+            "recommendedValue": true,
+            "explanation": "When enabled, IAM Policy created from KMS key grant will reduce the resource scope to this key only."
+          },
+          "@aws-cdk/pipelines:reduceAssetRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "Remove the root account principal from PipelineAssetsFileRole trust policy",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-eks:nodegroupNameAttribute": {
+            "recommendedValue": true,
+            "explanation": "When enabled, nodegroupName attribute of the provisioned EKS NodeGroup will not have the cluster name prefix."
+          },
+          "@aws-cdk/aws-ec2:ebsDefaultGp3Volume": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default volume type of the EBS volume will be GP3"
+          },
+          "@aws-cdk/aws-ecs:removeDefaultDeploymentAlarm": {
+            "recommendedValue": true,
+            "explanation": "When enabled, remove default deployment alarm settings"
+          },
+          "@aws-cdk/custom-resources:logApiResponseDataPropertyTrueDefault": {
+            "recommendedValue": false,
+            "explanation": "When enabled, the custom resource used for `AwsCustomResource` will configure the `logApiResponseData` property as true by default"
+          },
+          "@aws-cdk/aws-s3:keepNotificationInImportedBucket": {
+            "recommendedValue": false,
+            "explanation": "When enabled, Adding notifications to a bucket in the current stack will not remove notification from imported stack."
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:useNewS3UriParametersForBedrockInvokeModelTask": {
+            "recommendedValue": true,
+            "explanation": "When enabled, use new props for S3 URI field in task definition of state machine for bedrock invoke model.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:explicitStackTags": {
+            "recommendedValue": true,
+            "explanation": "When enabled, stack tags need to be assigned explicitly on a Stack."
+          },
+          "@aws-cdk/aws-ecs:enableImdsBlockingDeprecatedFeature": {
+            "recommendedValue": false,
+            "explanation": "When set to true along with canContainersAccessInstanceRole=false in ECS cluster, new updated commands will be added to UserData to block container accessing IMDS. **Applicable to Linux only. IMPORTANT: See [details.](#aws-cdkaws-ecsenableImdsBlockingDeprecatedFeature)**"
+          },
+          "@aws-cdk/aws-ecs:disableEcsImdsBlocking": {
+            "recommendedValue": true,
+            "explanation": "When set to true, CDK synth will throw exception if canContainersAccessInstanceRole is false. **IMPORTANT: See [details.](#aws-cdkaws-ecsdisableEcsImdsBlocking)**"
+          },
+          "@aws-cdk/aws-ecs:reduceEc2FargateCloudWatchPermissions": {
+            "recommendedValue": true,
+            "explanation": "When enabled, we will only grant the necessary permissions when users specify cloudwatch log group through logConfiguration"
+          },
+          "@aws-cdk/aws-dynamodb:resourcePolicyPerReplica": {
+            "recommendedValue": true,
+            "explanation": "When enabled will allow you to specify a resource policy per replica, and not copy the source table policy to all replicas"
+          },
+          "@aws-cdk/aws-ec2:ec2SumTImeoutEnabled": {
+            "recommendedValue": true,
+            "explanation": "When enabled, initOptions.timeout and resourceSignalTimeout values will be summed together."
+          },
+          "@aws-cdk/aws-appsync:appSyncGraphQLAPIScopeLambdaPermission": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a Lambda authorizer Permission created when using GraphqlApi will be properly scoped with a SourceArn."
+          },
+          "@aws-cdk/aws-rds:setCorrectValueForDatabaseInstanceReadReplicaInstanceResourceId": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the value of property `instanceResourceId` in construct `DatabaseInstanceReadReplica` will be set to the correct value which is `DbiResourceId` instead of currently `DbInstanceArn`"
+          },
+          "@aws-cdk/core:cfnIncludeRejectComplexResourceUpdateCreatePolicyIntrinsics": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CFN templates added with `cfn-include` will error if the template contains Resource Update or Create policies with CFN Intrinsics that include non-primitive values."
+          },
+          "@aws-cdk/aws-lambda-nodejs:sdkV3ExcludeSmithyPackages": {
+            "recommendedValue": true,
+            "explanation": "When enabled, both `@aws-sdk` and `@smithy` packages will be excluded from the Lambda Node.js 18.x runtime to prevent version mismatches in bundled applications."
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:fixRunEcsTaskPolicy": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the resource of IAM Run Ecs policy generated by SFN EcsRunTask will reference the definition, instead of constructing ARN."
+          },
+          "@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the BastionHost construct will use the latest Amazon Linux 2023 AMI, instead of Amazon Linux 2."
+          },
+          "@aws-cdk/core:aspectStabilization": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a stabilization loop will be run when invoking Aspects during synthesis.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-route53-targets:userPoolDomainNameMethodWithoutCustomResource": {
+            "recommendedValue": true,
+            "explanation": "When enabled, use a new method for DNS Name of user pool domain target without creating a custom resource."
+          },
+          "@aws-cdk/aws-elasticloadbalancingV2:albDualstackWithoutPublicIpv4SecurityGroupRulesDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default security group ingress rules will allow IPv6 ingress from anywhere"
+          },
+          "@aws-cdk/aws-iam:oidcRejectUnauthorizedConnections": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default behaviour of OIDC provider will reject unauthorized connections"
+          },
+          "@aws-cdk/core:enableAdditionalMetadataCollection": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK will expand the scope of usage data collected to better inform CDK development and improve communication for security concerns and emerging issues."
+          },
+          "@aws-cdk/aws-lambda:createNewPoliciesWithAddToRolePolicy": {
+            "recommendedValue": false,
+            "explanation": "[Deprecated] When enabled, Lambda will create new inline policies with AddToRolePolicy instead of adding to the Default Policy Statement"
+          },
+          "@aws-cdk/aws-s3:setUniqueReplicationRoleName": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK will automatically generate a unique role name that is used for s3 object replication."
+          },
+          "@aws-cdk/pipelines:reduceStageRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "Remove the root account principal from Stage addActions trust policy",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-events:requireEventBusPolicySid": {
+            "recommendedValue": true,
+            "explanation": "When enabled, grantPutEventsTo() will use resource policies with Statement IDs for service principals."
+          },
+          "@aws-cdk/core:aspectPrioritiesMutating": {
+            "recommendedValue": true,
+            "explanation": "When set to true, Aspects added by the construct library on your behalf will be given a priority of MUTATING."
+          },
+          "@aws-cdk/aws-dynamodb:retainTableReplica": {
+            "recommendedValue": true,
+            "explanation": "When enabled, table replica will be default to the removal policy of source table unless specified otherwise."
+          },
+          "@aws-cdk/cognito:logUserPoolClientSecretValue": {
+            "recommendedValue": false,
+            "explanation": "When disabled, the value of the user pool client secret will not be logged in the custom resource lambda function logs."
+          },
+          "@aws-cdk/pipelines:reduceCrossAccountActionRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "When enabled, scopes down the trust policy for the cross-account action role",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the resultWriterV2 property of DistributedMap will be used insted of resultWriter"
+          },
+          "@aws-cdk/s3-notifications:addS3TrustKeyPolicyForSnsSubscriptions": {
+            "recommendedValue": true,
+            "explanation": "Add an S3 trust policy to a KMS key resource policy for SNS subscriptions."
+          },
+          "@aws-cdk/aws-ec2:requirePrivateSubnetsForEgressOnlyInternetGateway": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the EgressOnlyGateway resource is only created if private subnets are defined in the dual-stack VPC."
+          },
+          "@aws-cdk/aws-ec2-alpha:useResourceIdForVpcV2Migration": {
+            "recommendedValue": false,
+            "explanation": "When enabled, use resource IDs for VPC V2 migration"
+          },
+          "@aws-cdk/aws-s3:publicAccessBlockedByDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, setting any combination of options for BlockPublicAccess will automatically set true for any options not defined."
+          },
+          "@aws-cdk/aws-lambda:useCdkManagedLogGroup": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK creates and manages loggroup for the lambda function"
+          }
+        }
+      }
+    }
+  },
+  "minimumCliVersion": "2.1026.0"
+}

@@ -1,0 +1,11 @@
+type Device @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  name: String!
+  imei: String!
+  status: DeviceStatus
+}
+
+enum DeviceStatus {
+  ACTIVE
+  INACTIVE
+}

@@ -1,0 +1,2171 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource0EDC9522OutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableMa3BA030D8": {
+   "Type": "String"
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName": {
+   "Type": "String"
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef": {
+   "Type": "String"
+  },
+  "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-3"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-4"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "us-west-2"
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "DeviceTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource0EDC9522OutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataAmplifyTableMa3BA030D8"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "Device-",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": false
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "deletionProtectionEnabled": false,
+    "allowDestructiveGraphqlSchemaUpdates": true,
+    "replaceTableUponGsiUpdate": true,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceTable/Default/Default"
+   }
+  },
+  "DeviceIAMRole48AB7F95": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Policies": [
+     {
+      "PolicyDocument": {
+       "Statement": [
+        {
+         "Action": [
+          "dynamodb:BatchGetItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem",
+          "dynamodb:ConditionCheckItem",
+          "dynamodb:DescribeTable",
+          "dynamodb:GetRecords",
+          "dynamodb:GetShardIterator"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "Device-",
+                {
+                 "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "Device-",
+                {
+                 "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "Version": "2012-10-17"
+      },
+      "PolicyName": "DynamoDBAccess"
+     }
+    ],
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "DeviceIAMRole062eca-",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "amplifyData"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceIAMRole/Resource"
+   }
+  },
+  "DeviceDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "DeviceTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "DeviceTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "DeviceIAMRole48AB7F95",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "DeviceIAMRole48AB7F95"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceDataSource/Resource"
+   }
+  },
+  "QuerygetDeviceauth0FunctionQuerygetDeviceauth0FunctionAppSyncFunctionE9D84544": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerygetDeviceauth0Function/QuerygetDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetDevicepostAuth0FunctionQuerygetDevicepostAuth0FunctionAppSyncFunction408D7C1C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerygetDevicepostAuth0Function/QuerygetDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetDeviceDataResolverFnQueryGetDeviceDataResolverFnAppSyncFunction7DD622FA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QueryGetDeviceDataResolverFn/QueryGetDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "getDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetDeviceauth0FunctionQuerygetDeviceauth0FunctionAppSyncFunctionE9D84544",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetDevicepostAuth0FunctionQuerygetDevicepostAuth0FunctionAppSyncFunction408D7C1C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetDeviceDataResolverFnQueryGetDeviceDataResolverFnAppSyncFunction7DD622FA",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DeviceTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/queryGetDeviceResolver"
+   }
+  },
+  "QuerylistDevicesauth0FunctionQuerylistDevicesauth0FunctionAppSyncFunction1D10C07D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistDevicesauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerylistDevicesauth0Function/QuerylistDevicesauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistDevicespostAuth0FunctionQuerylistDevicespostAuth0FunctionAppSyncFunctionAD2CEE19": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistDevicespostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QuerylistDevicespostAuth0Function/QuerylistDevicespostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListDevicesDataResolverFnQueryListDevicesDataResolverFnAppSyncFunctionB811C2D4": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListDevicesDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9fcbe070ecd3023c5bf5b966fa9584757db9762eef123bad0820bd87591b2174.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/QueryListDevicesDataResolverFn/QueryListDevicesDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "listDevices",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistDevicesauth0FunctionQuerylistDevicesauth0FunctionAppSyncFunction1D10C07D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistDevicespostAuth0FunctionQuerylistDevicespostAuth0FunctionAppSyncFunctionAD2CEE19",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListDevicesDataResolverFnQueryListDevicesDataResolverFnAppSyncFunctionB811C2D4",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listDevices\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DeviceTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/queryListDevicesResolver"
+   }
+  },
+  "MutationcreateDeviceinit0FunctionMutationcreateDeviceinit0FunctionAppSyncFunction47189968": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDeviceinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a183ddccbd956316c38ef97177b8f088ef0826f62023323f5ae6053d348ccffc.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDeviceinit0Function/MutationcreateDeviceinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateDeviceauth0FunctionMutationcreateDeviceauth0FunctionAppSyncFunctionC9E29764": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d4f3807f0ceabeaae8be7675c18143333fedecb8bc3149d33136a90a97ee8f44.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDeviceauth0Function/MutationcreateDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateDevicepostAuth0FunctionMutationcreateDevicepostAuth0FunctionAppSyncFunctionF7E412C6": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationcreateDevicepostAuth0Function/MutationcreateDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateDeviceDataResolverFnMutationCreateDeviceDataResolverFnAppSyncFunction83B1CD29": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/777b1e1a4f1183c71be005cf24a397c71d76a4a4dabfe2bb2fa2b09486e15e72.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationCreateDeviceDataResolverFn/MutationCreateDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "createDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDeviceinit0FunctionMutationcreateDeviceinit0FunctionAppSyncFunction47189968",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDeviceauth0FunctionMutationcreateDeviceauth0FunctionAppSyncFunctionC9E29764",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDevicepostAuth0FunctionMutationcreateDevicepostAuth0FunctionAppSyncFunctionF7E412C6",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateDeviceDataResolverFnMutationCreateDeviceDataResolverFnAppSyncFunction83B1CD29",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DeviceTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationCreateDeviceResolver"
+   }
+  },
+  "MutationupdateDeviceinit0FunctionMutationupdateDeviceinit0FunctionAppSyncFunction2976639D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDeviceinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDeviceinit0Function/MutationupdateDeviceinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateDeviceauth0FunctionMutationupdateDeviceauth0FunctionAppSyncFunctionB3EFB6B3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c3511479b3d8bd165e4c0c5acd230b9afcdb8f5e62c78bf8ae7a8bcb5ad174f5.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDeviceauth0Function/MutationupdateDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateDevicepostAuth0FunctionMutationupdateDevicepostAuth0FunctionAppSyncFunctionB0260441": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationupdateDevicepostAuth0Function/MutationupdateDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateDeviceDataResolverFnMutationUpdateDeviceDataResolverFnAppSyncFunction3A3B9986": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationUpdateDeviceDataResolverFn/MutationUpdateDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "updateDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDeviceinit0FunctionMutationupdateDeviceinit0FunctionAppSyncFunction2976639D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDeviceauth0FunctionMutationupdateDeviceauth0FunctionAppSyncFunctionB3EFB6B3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDevicepostAuth0FunctionMutationupdateDevicepostAuth0FunctionAppSyncFunctionB0260441",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateDeviceDataResolverFnMutationUpdateDeviceDataResolverFnAppSyncFunction3A3B9986",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DeviceTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationUpdateDeviceResolver"
+   }
+  },
+  "MutationdeleteDeviceauth0FunctionMutationdeleteDeviceauth0FunctionAppSyncFunction89481AAF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationdeleteDeviceauth0Function/MutationdeleteDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteDevicepostAuth0FunctionMutationdeleteDevicepostAuth0FunctionAppSyncFunctionABE1E6F4": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationdeleteDevicepostAuth0Function/MutationdeleteDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteDeviceDataResolverFnMutationDeleteDeviceDataResolverFnAppSyncFunction690311FB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DeviceDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DeviceDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/MutationDeleteDeviceDataResolverFn/MutationDeleteDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "deleteDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteDeviceauth0FunctionMutationdeleteDeviceauth0FunctionAppSyncFunction89481AAF",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteDevicepostAuth0FunctionMutationdeleteDevicepostAuth0FunctionAppSyncFunctionABE1E6F4",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteDeviceDataResolverFnMutationDeleteDeviceDataResolverFnAppSyncFunction690311FB",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DeviceTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/mutationDeleteDeviceResolver"
+   }
+  },
+  "SubscriptiononCreateDeviceauth0FunctionSubscriptiononCreateDeviceauth0FunctionAppSyncFunction9F6A1BD8": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononCreateDeviceauth0Function/SubscriptiononCreateDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateDevicepostAuth0FunctionSubscriptiononCreateDevicepostAuth0FunctionAppSyncFunction2AB5599A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononCreateDevicepostAuth0Function/SubscriptiononCreateDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateDeviceDataResolverFnSubscriptionOnCreateDeviceDataResolverFnAppSyncFunction15AF5152": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnCreateDeviceDataResolverFn/SubscriptionOnCreateDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "onCreateDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateDeviceauth0FunctionSubscriptiononCreateDeviceauth0FunctionAppSyncFunction9F6A1BD8",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateDevicepostAuth0FunctionSubscriptiononCreateDevicepostAuth0FunctionAppSyncFunction2AB5599A",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateDeviceDataResolverFnSubscriptionOnCreateDeviceDataResolverFnAppSyncFunction15AF5152",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnCreateDeviceResolver"
+   }
+  },
+  "SubscriptiononUpdateDeviceauth0FunctionSubscriptiononUpdateDeviceauth0FunctionAppSyncFunctionF5B9EBF6": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononUpdateDeviceauth0Function/SubscriptiononUpdateDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateDevicepostAuth0FunctionSubscriptiononUpdateDevicepostAuth0FunctionAppSyncFunction52084CB7": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononUpdateDevicepostAuth0Function/SubscriptiononUpdateDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateDeviceDataResolverFnSubscriptionOnUpdateDeviceDataResolverFnAppSyncFunction90B537AF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnUpdateDeviceDataResolverFn/SubscriptionOnUpdateDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "onUpdateDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateDeviceauth0FunctionSubscriptiononUpdateDeviceauth0FunctionAppSyncFunctionF5B9EBF6",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateDevicepostAuth0FunctionSubscriptiononUpdateDevicepostAuth0FunctionAppSyncFunction52084CB7",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateDeviceDataResolverFnSubscriptionOnUpdateDeviceDataResolverFnAppSyncFunction90B537AF",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnUpdateDeviceResolver"
+   }
+  },
+  "SubscriptiononDeleteDeviceauth0FunctionSubscriptiononDeleteDeviceauth0FunctionAppSyncFunctionA77B33CC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteDeviceauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononDeleteDeviceauth0Function/SubscriptiononDeleteDeviceauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteDevicepostAuth0FunctionSubscriptiononDeleteDevicepostAuth0FunctionAppSyncFunction9CE65A66": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteDevicepostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptiononDeleteDevicepostAuth0Function/SubscriptiononDeleteDevicepostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteDeviceDataResolverFnSubscriptionOnDeleteDeviceDataResolverFnAppSyncFunction5FF3B63B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteDeviceDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/SubscriptionOnDeleteDeviceDataResolverFn/SubscriptionOnDeleteDeviceDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteDeviceResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "onDeleteDevice",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteDeviceauth0FunctionSubscriptiononDeleteDeviceauth0FunctionAppSyncFunctionA77B33CC",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteDevicepostAuth0FunctionSubscriptiononDeleteDevicepostAuth0FunctionAppSyncFunction9CE65A66",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteDeviceDataResolverFnSubscriptionOnDeleteDeviceDataResolverFnAppSyncFunction5FF3B63B",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteDevice\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/subscriptionOnDeleteDeviceResolver"
+   }
+  },
+  "DeviceOwnerDataResolverFnDeviceOwnerDataResolverFnAppSyncFunction4D6B9452": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPINONEDSB95538DDName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "DeviceOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/DeviceOwnerDataResolverFn/DeviceOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeviceownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "DeviceOwnerDataResolverFnDeviceOwnerDataResolverFnAppSyncFunction4D6B9452",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Device\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthauthenticatedUserRole87C08B72Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthunauthenticatedUserRole5664F12DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthNestedStackauthNestedStackResource9EA91B9EOutputsamplifygpstrackernewInfoTechFusionsandbox73a2bf5aadauthamplifyAuthIdentityPoolD79038B1Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Device"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/deviceOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WOwW6DMAyGn6X34LX0susK2nGbYPfKJAalgINip1WFePcJOnXa6fcnf7L/HPJDDvsd3iSzrs8G38D8QaLkakXbm6LlL4w4klJcoQjsvPrApiIJKVoyRRIN4x+2/JzxJufZ3RnH4Br4xmagEwoZjyPMVRgedhhoMThNcmcLc7npZVOiYv08+Z/eE9u1RBG49V2KuDX6/TxcKS5GjmcUIRV4W8PIEU7J9qRrgWV1P5NOSc22rhU7z91iODiCi7xc8xwOr7DfXcT7LCZWPxJUj/wBY1pGrzYBAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad/data/amplifyData/Device/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttDeviceTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "DeviceTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "GetAtt:DeviceTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttDeviceTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "Device-",
+      {
+       "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifygpstrackernewInfoTechFusionsandbox73a2bf5aaddataamplifyDataGraphQLAPIF50187FDApiId"
+       },
+       "GetAtt:DeviceTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}
