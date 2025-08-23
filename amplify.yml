@@ -1,0 +1,21 @@
+﻿version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - npx ampx generate outputs --stack amplify-gpstrackernew-InfoTechFusion-sandbox-73a2bf5aad
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
