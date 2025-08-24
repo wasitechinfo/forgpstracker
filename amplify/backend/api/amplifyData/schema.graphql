@@ -1,0 +1,11 @@
+type Device @model {
+  id: ID!
+  name: String!
+  imei: String!
+  lat: Float
+  lng: Float
+  speed: Float
+  ignition: Boolean
+  battery: Int
+  lastUpdate: AWSDateTime
+}
